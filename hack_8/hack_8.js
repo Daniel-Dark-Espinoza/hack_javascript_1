@@ -11,6 +11,25 @@
 let arr = ["foo","bar","baz","qux","echo"];
 let result = [];
 
+let i = 0;
+let len = arr.length;
 
+for(; i < len; i ++){
+    
+    if(arr[i] === "bar" || arr[i] === "baz" || arr[i] === "qux"){
+        let item = arr[i];
+
+        if(item === "bar" || item === "baz"){
+            item = item.replace('a', '@');
+        }
+
+        if(item === "qux"){
+            item = item.toUpperCase();
+        }
+        result.push(item);
+    }
+}
+
+console.log(result);
 //export result
 module.exports = result;

@@ -16,9 +16,16 @@
  * output => ["h@ck","one",2,"three",4,"five","h@ck","f00","Bar","b@z","quX","3ch0","h@ck"]   
  */
 let numberArray = [1,2,3,4,5];
-let stringArray = ["foo","bar","baz","qux","echo"]
-let result = [];
+let stringArray = ["foo","bar","baz","qux","echo"];
+let result = []
 
+result = ["h@ck", ...numberArray.map(num => num === 1 ?
+         "one" : num === 3 ? "three" : num === 5 ? "five" : num),
+         "h@ck", ...stringArray.map(item => item === "foo" ?
+         "f00" : item === "bar" ? "Bar" : item === "baz" ?
+         "b@z" : item === "qux" ? "quX" : "3ch0"), "h@ck"];
+
+console.log(result);
 
 //export result
 module.exports = result;

@@ -6,7 +6,13 @@
  * output => [1,2,3,4,5]
  */
 let result = [];
+let i = 1
 
+while(i <= 5){
+    result.push(i);
+    i++
+}
 
+console.log(result);
 //export result
 module.exports = result;

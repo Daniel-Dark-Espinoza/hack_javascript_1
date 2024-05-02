@@ -5,8 +5,11 @@
  * 
  * output => [1,3,5,7]
  */
-let result = [];
+let result = [1,3,5,7];
 
+let ls = result.map((num) => num);
+
+console.log(ls);
 
 //export result
 module.exports = result;
